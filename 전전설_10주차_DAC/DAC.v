@@ -40,7 +40,7 @@ parameter DELAY   = 2'b00,
           UP_DATA = 2'b10;
 
 
-oneshot_universal #(.WIDTH(6)) O1 ( //¿ø¼¦ÇÁ¸®°Å ¼öÁ¤
+oneshot_universal #(.WIDTH(6)) O1 ( //ì›ìƒ·í”„ë¦¬ê±° ìˆ˜ì •
     .clk      (clk),
     .rst      (rst),
     .btn      (btn),
@@ -86,7 +86,7 @@ end
 
 always @(posedge clk or negedge rst) begin
   if(!rst) begin
-    dac_d_temp <= 8'b1000_0000; //ÃÊ±â°ª ¼³Á¤ 128 = 2.5V < ¿À¹öÇÃ·Î¿ì ¾ø¾Ö±â
+    dac_d_temp <= 8'b1000_0000; //ì´ˆê¸°ê°’ ì„¤ì • 128 = 2.5V < ì˜¤ë²„í”Œë¡œìš° ì—†ì• ê¸°
     led_out    <= 8'b1000_0000;
   end
   else begin
